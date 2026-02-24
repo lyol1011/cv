@@ -109,8 +109,36 @@
       gap:18px;
       align-items:stretch;
     }
+    .heroMeta{
+      margin-top:14px;
+      display:grid;
+      gap:6px;
+      color:var(--muted);
+      font-size:13px;
+    }   
+
+    .heroMeta .mono{
+      color:var(--text);
+      }
     @media (max-width: 900px){
       .hero{grid-template-columns:1fr; padding-top:22px}
+      .skillsGrid{grid-template-columns: 1fr}
+    }
+
+    .skillPanel{
+      border:1px solid var(--line);
+      border-radius:14px;
+      padding:12px;
+      background: color-mix(in srgb, var(--card) 88%, transparent);
+    }
+
+    .skillPanel .role{
+      margin-bottom:8px;
+    }
+
+    .skillPanel .tags{
+      margin-top:0;
+      gap:10px; /* немного увеличили расстояние между тегами */
     }
 
     .card{
@@ -198,13 +226,15 @@
     li{margin:6px 0}
 
     .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+
     .tag{
-      padding:6px 9px;
-      border:1px solid var(--line);
-      border-radius:999px;
-      font-size:12px;
-      color:var(--muted);
-      background: color-mix(in srgb, var(--card) 85%, transparent);
+    padding:6px 10px;
+    border:1px solid var(--line);
+    border-radius:999px;
+    font-size:12px;
+    color:var(--muted);
+    background: color-mix(in srgb, var(--card) 85%, transparent);
+    line-height:1.2;
     }
 
     .projects{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px}
@@ -285,7 +315,6 @@
       <a class="chip" href="#education">Studium</a>
       <a class="chip" href="#projects">Projekte</a>
       <a class="chip" href="#skills">Skills</a>
-      <a class="chip" href="#focus">Fokus</a>
       <a class="chip" href="#contact">Kontakt</a>
       <button class="btn" id="themeBtn" type="button">Design</button>
     </nav>
@@ -309,11 +338,11 @@
         <a class="btn secondary" href="https://www.linkedin.com/in/olena-lymar-971bb726a/" target="_blank" rel="noopener">LinkedIn</a>
       </div>
 
-      <p class="note" style="margin-top:14px;">
-        <span class="mono">Standort:</span> Karlsruhe ·
-        <span class="mono">Sprachen:</span> DE (C1), EN (B2) ·
-        <span class="mono">Staatsangehörigkeit:</span> ukrainisch
-      </p>
+      <div class="heroMeta">
+        <div><span class="mono">Standort:</span> Karlsruhe</div>
+        <div><span class="mono">Sprachen:</span> DE (C1), EN (B2)</div>
+        <div><span class="mono">Staatsangehörigkeit:</span> ukrainisch</div>
+      </div>
     </div>
 
     <aside class="card heroSide" aria-label="Profil">
@@ -602,8 +631,8 @@
       <h2>Skills</h2>
     </div>
     <div class="card block">
-      <div class="grid2">
-        <div>
+      <div class="skillsGrid">
+        <div class="skillPanel">
           <div class="role">Data & ML</div>
           <div class="tags">
             <span class="tag">Python</span>
@@ -615,7 +644,8 @@
             <span class="tag">Model Evaluation</span>
           </div>
         </div>
-        <div>
+      
+        <div class="skillPanel">
           <div class="role">Datenbanken & Tools</div>
           <div class="tags">
             <span class="tag">SQL</span>
@@ -627,6 +657,17 @@
           </div>
         </div>
       </div>
+      
+      <div class="skillPanel" style="margin-top:12px;">
+        <div class="role">Sprachen</div>
+        <div class="tags">
+          <span class="tag">Deutsch (C1)</span>
+          <span class="tag">Englisch (B2)</span>
+          <span class="tag">Ukrainisch (Muttersprache)</span>
+          <span class="tag">Russisch (Muttersprache)</span>
+        </div>
+      </div>
+      </div>
 
       <div style="margin-top:12px">
         <div class="role">Sprachen</div>
@@ -637,25 +678,6 @@
           <span class="tag">Russisch (Muttersprache)</span>
         </div>
       </div>
-    </div>
-  </section>
-
-  <!-- CURRENT FOCUS -->
-  <section id="focus">
-    <div class="sectionTitle">
-      <h2>Current Focus</h2>
-    </div>
-    <div class="card block">
-      <div class="tags" style="margin-top:0;">
-        <span class="tag">Data Analysis & Visualisierung</span>
-        <span class="tag">Applied Machine Learning</span>
-        <span class="tag">Business-orientierte Analytics</span>
-        <span class="tag">Datenqualität & Datenvalidierung</span>
-        <span class="tag">SQL für Analysen</span>
-      </div>
-      <p class="note" style="margin-top:12px;">
-        Ich suche eine Werkstudenten- oder Praktikumsstelle im Bereich Data Analytics, Business Analytics oder Data Science.
-      </p>
     </div>
   </section>
 
