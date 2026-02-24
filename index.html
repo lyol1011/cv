@@ -1,0 +1,518 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Olena Lymar – Data Science Studentin | Portfolio & CV" />
+  <title>Olena Lymar — Data Analytics / Data Science</title>
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Olena Lymar — Data Analytics / Data Science" />
+  <meta property="og:description" content="Portfolio, Projekte, Skills, Kontakt" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --card:#111522;
+      --text:#e9eefc;
+      --muted:#a9b3cf;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa2ff;
+      --accent2:#7dffcc;
+      --shadow: 0 10px 25px rgba(0,0,0,.35);
+      --radius: 18px;
+      --max: 1060px;
+    }
+    @media (prefers-color-scheme: light){
+      :root{
+        --bg:#f6f7fb;
+        --card:#ffffff;
+        --text:#0e1322;
+        --muted:#4a5675;
+        --line:rgba(10,18,40,.12);
+        --shadow: 0 10px 25px rgba(10,18,40,.08);
+      }
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,162,255,.25), transparent 60%),
+                  radial-gradient(900px 500px at 110% 20%, rgba(125,255,204,.18), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.5;
+    }
+    a{color:inherit; text-decoration:none}
+    a:hover{opacity:.9}
+    .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+    header{
+      position:sticky; top:0; z-index:50;
+      backdrop-filter: blur(10px);
+      background: color-mix(in srgb, var(--bg) 78%, transparent);
+      border-bottom:1px solid var(--line);
+    }
+    .nav{
+      max-width:var(--max);
+      margin:0 auto;
+      padding:14px 18px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:.2px}
+    .dot{
+      width:10px; height:10px; border-radius:99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 6px rgba(122,162,255,.12);
+    }
+    .navlinks{display:flex; flex-wrap:wrap; gap:10px; align-items:center; justify-content:flex-end}
+    .chip{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 90%, transparent);
+      padding:8px 10px;
+      border-radius:999px;
+      font-size:13px;
+      color:var(--muted);
+    }
+    .chip:hover{color:var(--text)}
+    .btn{
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(122,162,255,.18), rgba(125,255,204,.12));
+      padding:9px 12px;
+      border-radius:999px;
+      font-size:13px;
+      font-weight:600;
+      cursor:pointer;
+      color:var(--text);
+    }
+    .btn:hover{transform:translateY(-1px)}
+    .hero{
+      padding:34px 0 6px;
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap:18px;
+      align-items:stretch;
+    }
+    @media (max-width: 900px){
+      .hero{grid-template-columns:1fr; padding-top:22px}
+    }
+    .card{
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      border-radius:var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .heroMain{padding:26px 22px}
+    .kicker{color:var(--muted); font-weight:600; font-size:13px; letter-spacing:.2px}
+    h1{margin:10px 0 10px; font-size:44px; line-height:1.08}
+    @media (max-width: 520px){ h1{font-size:36px} }
+    .sub{color:var(--muted); font-size:16px; margin:0 0 18px; max-width:65ch}
+    .actions{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
+    .primary{
+      background: linear-gradient(135deg, rgba(122,162,255,.45), rgba(125,255,204,.22));
+      border:1px solid rgba(122,162,255,.40);
+    }
+    .secondary{
+      background: color-mix(in srgb, var(--card) 85%, transparent);
+    }
+    .heroSide{padding:18px; display:grid; gap:12px; align-content:start}
+    .profile{
+      display:flex; gap:12px; align-items:center;
+      padding:14px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+    }
+    .avatar{
+      width:64px; height:64px; border-radius:16px;
+      overflow:hidden;
+      border:1px solid var(--line);
+      background: linear-gradient(135deg, rgba(122,162,255,.25), rgba(125,255,204,.12));
+      flex:0 0 auto;
+    }
+    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
+    .meta strong{display:block}
+    .meta span{display:block; color:var(--muted); font-size:13px}
+    .mini{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap:10px;
+    }
+    .stat{
+      padding:12px 12px;
+      border-radius:16px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+    }
+    .stat b{display:block; font-size:14px}
+    .stat small{color:var(--muted)}
+    section{margin-top:22px}
+    .sectionTitle{
+      display:flex; align-items:flex-end; justify-content:space-between; gap:12px;
+      margin:0 0 10px;
+    }
+    .sectionTitle h2{margin:0; font-size:18px}
+    .sectionTitle p{margin:0; color:var(--muted); font-size:13px}
+    .grid2{display:grid; grid-template-columns:1fr 1fr; gap:14px}
+    @media (max-width: 900px){ .grid2{grid-template-columns:1fr} }
+    .block{padding:18px 18px}
+    .item{padding:14px 0; border-top:1px dashed var(--line)}
+    .item:first-child{border-top:none; padding-top:0}
+    .item:last-child{padding-bottom:0}
+    .row{display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap}
+    .role{font-weight:700}
+    .where{color:var(--muted)}
+    .when{color:var(--muted); font-size:13px}
+    ul{margin:10px 0 0 18px; color:var(--text)}
+    li{margin:6px 0}
+    .tags{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .tag{
+      padding:6px 9px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      font-size:12px;
+      color:var(--muted);
+      background: color-mix(in srgb, var(--card) 85%, transparent);
+    }
+    .projects{display:grid; grid-template-columns:1fr 1fr 1fr; gap:14px}
+    @media (max-width: 980px){ .projects{grid-template-columns:1fr 1fr} }
+    @media (max-width: 640px){ .projects{grid-template-columns:1fr} }
+    .proj{padding:16px}
+    .proj h3{margin:0 0 6px; font-size:16px}
+    .proj p{margin:0; color:var(--muted); font-size:13px}
+    .proj .tags{margin-top:12px}
+    .proj .links{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
+    .link{
+      font-size:13px; color:var(--text);
+      padding:8px 10px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 85%, transparent);
+    }
+    .footer{
+      margin-top:26px;
+      padding:16px 18px;
+      color:var(--muted);
+      font-size:13px;
+      border-top:1px solid var(--line);
+    }
+    .note{color:var(--muted); font-size:13px}
+    .mono{font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace}
+    .toast{
+      position:fixed; left:50%; bottom:20px; transform:translateX(-50%);
+      padding:10px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background: color-mix(in srgb, var(--card) 92%, transparent);
+      box-shadow: var(--shadow);
+      color:var(--text);
+      font-size:13px;
+      opacity:0; pointer-events:none;
+      transition: opacity .2s ease, transform .2s ease;
+    }
+    .toast.show{opacity:1; transform:translateX(-50%) translateY(-2px)}
+  </style>
+</head>
+
+<body>
+<header>
+  <div class="nav">
+    <div class="brand">
+      <span class="dot" aria-hidden="true"></span>
+      <span>Olena Lymar</span>
+    </div>
+    <nav class="navlinks" aria-label="Navigation">
+      <a class="chip" href="#experience">Erfahrung</a>
+      <a class="chip" href="#education">Studium</a>
+      <a class="chip" href="#projects">Projekte</a>
+      <a class="chip" href="#skills">Skills</a>
+      <a class="chip" href="#contact">Kontakt</a>
+      <button class="btn" id="themeBtn" type="button">Theme</button>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="hero">
+    <div class="card heroMain">
+      <div class="kicker">Data Analytics / Data Science · Praktikum / Werkstudentin</div>
+      <h1>Portfolio & CV</h1>
+      <p class="sub">
+        Data-Science-Studentin (HKA) mit Praxiserfahrung bei SAP SE. Fokus auf Python, SQL, EDA, Machine Learning und Datenvisualisierung.
+      </p>
+
+      <div class="actions">
+        <a class="btn primary" href="#contact">Kontakt</a>
+        <!-- Если хочешь дать PDF резюме: положи файл в репо как /assets/CV.pdf и раскомментируй строку ниже -->
+        <!-- <a class="btn secondary" href="assets/CV.pdf" target="_blank" rel="noopener">CV als PDF</a> -->
+        <a class="btn secondary" href="https://github.com/lyol1011" target="_blank" rel="noopener">GitHub</a>
+        <!-- Добавь LinkedIn -->
+        <!-- <a class="btn secondary" href="https://www.linkedin.com/in/DEIN-PROFIL/" target="_blank" rel="noopener">LinkedIn</a> -->
+      </div>
+
+      <p class="note" style="margin-top:14px;">
+        <span class="mono">Standort:</span> Karlsruhe · <span class="mono">Sprachen:</span> DE (C1), EN (B2)
+      </p>
+    </div>
+
+    <aside class="card heroSide" aria-label="Profil">
+      <div class="profile">
+        <div class="avatar" aria-hidden="true">
+          <img src="assets/photo.jpg" alt="Foto von Olena Lymar" />
+        </div>
+        <div class="meta">
+          <strong>Olena Lymar</strong>
+          <span>Data Science Studentin</span>
+          <span>Karlsruhe · verfügbar für Praktikum/Werkstudentin</span>
+        </div>
+      </div>
+
+      <div class="mini">
+        <div class="stat">
+          <b>3+ Jahre</b>
+          <small>SAP Erfahrung</small>
+        </div>
+        <div class="stat">
+          <b>Python · SQL</b>
+          <small>Analytics & ML</small>
+        </div>
+      </div>
+
+      <div class="stat">
+        <b>Schwerpunkte</b>
+        <div class="tags">
+          <span class="tag">EDA</span>
+          <span class="tag">Machine Learning</span>
+          <span class="tag">Dashboards</span>
+          <span class="tag">APIs</span>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <section id="experience">
+    <div class="sectionTitle">
+      <h2>Berufserfahrung</h2>
+      <p>kurz, ergebnisorientiert</p>
+    </div>
+    <div class="card block">
+      <div class="item">
+        <div class="row">
+          <div>
+            <div class="role">Werkstudentin – Hardware Asset Management</div>
+            <div class="where">SAP SE, Walldorf</div>
+          </div>
+          <div class="when">10/2022 – 02/2026</div>
+        </div>
+        <ul>
+          <li>Datenqualitätsmanagement und Bereinigung von Hardware-Asset-Datensätzen im SAP-Umfeld</li>
+          <li>Analyse und Validierung großer Datenmengen; Bearbeitung eines hohen Ticketvolumens unter Qualitätsvorgaben</li>
+          <li>Abstimmung mit internationalen Teams zur Sicherstellung konsistenter Datenstrukturen</li>
+          <li>Unterstützung bei Prozessverbesserungen im Asset Lifecycle Management</li>
+        </ul>
+        <div class="tags">
+          <span class="tag">Data Quality</span>
+          <span class="tag">Stakeholder</span>
+          <span class="tag">Prozess</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="sectionTitle">
+      <h2>Studium</h2>
+      <p>kompakt</p>
+    </div>
+    <div class="grid2">
+      <div class="card block">
+        <div class="item">
+          <div class="row">
+            <div>
+              <div class="role">B.Sc. Data Science</div>
+              <div class="where">Hochschule Karlsruhe (HKA)</div>
+            </div>
+            <div class="when">seit 09/2024</div>
+          </div>
+          <div class="note">Schwerpunkte: Data Analytics · Machine Learning · Datenbanken</div>
+        </div>
+      </div>
+
+      <div class="card block">
+        <div class="item">
+          <div class="row">
+            <div>
+              <div class="role">B.Sc. Software Engineering (6 Semester)</div>
+              <div class="where">Universität, Kiew</div>
+            </div>
+            <div class="when">09/2021 – 08/2024</div>
+          </div>
+          <div class="note">Schwerpunkte: Java/C# · Datenbanken</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="sectionTitle">
+      <h2>Projekte</h2>
+      <p>2–3 сильных кейса достаточно</p>
+    </div>
+
+    <div class="projects">
+      <article class="card proj">
+        <h3>Crypto Market Analysis</h3>
+        <p>EDA, Volatilitäts- & Trendanalysen; Visualisierung; API-basierte Datenintegration.</p>
+        <div class="tags">
+          <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">APIs</span><span class="tag">Visualization</span>
+        </div>
+        <div class="links">
+          <a class="link" href="https://github.com/lyol1011/crypto-market-analysis" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card proj">
+        <h3>Occupancy Detection (ML)</h3>
+        <p>Feature Engineering, Training & Evaluation von Klassifikationsmodellen (z. B. LR/RF).</p>
+        <div class="tags">
+          <span class="tag">scikit-learn</span><span class="tag">ML</span><span class="tag">Metrics</span>
+        </div>
+        <div class="links">
+          <a class="link" href="https://github.com/lyol1011/occupancy-detection-ml" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+
+      <article class="card proj">
+        <h3>Travel Platform Analytics</h3>
+        <p>Stakeholder-Analyse, KPI-Definition und Business-Dashboard in Power BI.</p>
+        <div class="tags">
+          <span class="tag">Power BI</span><span class="tag">KPI</span><span class="tag">Dashboard</span>
+        </div>
+        <div class="links">
+          <a class="link" href="https://github.com/lyol1011/travel-platform-analytics-dashboard" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="sectionTitle">
+      <h2>Skills</h2>
+      <p>ATS-freundlich</p>
+    </div>
+    <div class="card block">
+      <div class="grid2">
+        <div>
+          <div class="role">Data & ML</div>
+          <div class="tags">
+            <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">NumPy</span><span class="tag">scikit-learn</span>
+            <span class="tag">EDA</span><span class="tag">Feature Engineering</span><span class="tag">Model Evaluation</span>
+          </div>
+        </div>
+        <div>
+          <div class="role">Datenbanken & Tools</div>
+          <div class="tags">
+            <span class="tag">SQL</span><span class="tag">MariaDB</span><span class="tag">MongoDB</span>
+            <span class="tag">Git</span><span class="tag">GitHub</span><span class="tag">Power BI</span><span class="tag">MS Office</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="margin-top:12px">
+        <div class="role">Sprachen</div>
+        <div class="tags">
+          <span class="tag">Deutsch (C1)</span>
+          <span class="tag">Englisch (B2)</span>
+          <span class="tag">Ukrainisch (Muttersprache)</span>
+          <span class="tag">Russisch (Muttersprache)</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="sectionTitle">
+      <h2>Kontakt</h2>
+      <p>быстро и удобно для HR</p>
+    </div>
+    <div class="card block">
+      <div class="row">
+        <div>
+          <div class="role">Email</div>
+          <div class="note"><a id="emailLink" href="mailto:lena.lumar2003@gmail.com">lena.lumar2003@gmail.com</a></div>
+        </div>
+        <div>
+          <div class="role">Phone</div>
+          <div class="note">+49 … (опционально)</div>
+        </div>
+        <div>
+          <button class="btn" type="button" id="copyEmail">Email копировать</button>
+        </div>
+      </div>
+      <div class="note" style="margin-top:10px;">
+        Tipp: если не хочешь светить телефон публично — оставь только email + LinkedIn.
+      </div>
+    </div>
+  </section>
+
+  <div class="footer">
+    © <span id="year"></span> Olena Lymar · Built as a simple static page (fast, no tracking).
+  </div>
+</main>
+
+<div class="toast" id="toast">Gespeichert</div>
+
+<script>
+  // Year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Copy email
+  const toast = document.getElementById("toast");
+  const email = "lena.lumar2003@gmail.com";
+  document.getElementById("copyEmail").addEventListener("click", async () => {
+    try{
+      await navigator.clipboard.writeText(email);
+      toast.textContent = "Email kopiert";
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 1200);
+    }catch(e){
+      alert("Kopieren nicht möglich. Bitte manuell kopieren: " + email);
+    }
+  });
+
+  // Theme toggle (manual override)
+  const themeBtn = document.getElementById("themeBtn");
+  const key = "olena_theme";
+  function setTheme(mode){
+    document.documentElement.style.colorScheme = mode;
+    if(mode === "light"){
+      document.documentElement.style.setProperty("--bg","#f6f7fb");
+      document.documentElement.style.setProperty("--card","#ffffff");
+      document.documentElement.style.setProperty("--text","#0e1322");
+      document.documentElement.style.setProperty("--muted","#4a5675");
+      document.documentElement.style.setProperty("--line","rgba(10,18,40,.12)");
+      document.documentElement.style.setProperty("--shadow","0 10px 25px rgba(10,18,40,.08)");
+    }else{
+      document.documentElement.style.setProperty("--bg","#0b0d12");
+      document.documentElement.style.setProperty("--card","#111522");
+      document.documentElement.style.setProperty("--text","#e9eefc");
+      document.documentElement.style.setProperty("--muted","#a9b3cf");
+      document.documentElement.style.setProperty("--line","rgba(255,255,255,.10)");
+      document.documentElement.style.setProperty("--shadow","0 10px 25px rgba(0,0,0,.35)");
+    }
+    localStorage.setItem(key, mode);
+  }
+  const saved = localStorage.getItem(key);
+  if(saved) setTheme(saved);
+
+  themeBtn.addEventListener("click", () => {
+    const isLight = (localStorage.getItem(key) || "") === "light";
+    setTheme(isLight ? "dark" : "light");
+  });
+</script>
+</body>
+</html>
