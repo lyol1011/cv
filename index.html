@@ -48,6 +48,7 @@
     a{color:inherit; text-decoration:none}
     a:hover{opacity:.9}
     .wrap{max-width:var(--max); margin:0 auto; padding:28px 18px 70px}
+
     header{
       position:sticky; top:0; z-index:50;
       backdrop-filter: blur(10px);
@@ -93,7 +94,7 @@
     .hero{
       padding:34px 0 6px;
       display:grid;
-      grid-template-columns: 1.2fr .8fr;
+      grid-template-columns: 1.1fr .9fr;
       gap:18px;
       align-items:stretch;
     }
@@ -109,7 +110,9 @@
     .heroMain{padding:26px 22px}
     .kicker{color:var(--muted); font-weight:600; font-size:13px; letter-spacing:.2px}
     h1{margin:10px 0 10px; font-size:44px; line-height:1.08}
-    @media (max-width: 520px){ h1{font-size:36px} }
+    @media (max-width: 520px){
+    .avatar{ width:96px; height:96px; border-radius:18px; }
+    .profile{ padding:14px; }}
     .sub{color:var(--muted); font-size:16px; margin:0 0 18px; max-width:65ch}
     .actions{display:flex; flex-wrap:wrap; gap:10px; align-items:center}
     .primary{
@@ -121,22 +124,40 @@
     }
     .heroSide{padding:18px; display:grid; gap:12px; align-content:start}
     .profile{
-      display:flex; gap:12px; align-items:center;
+      display:flex; 
+      gap:12px; 
+      align-items:center;
       padding:14px;
       border-radius:16px;
       border:1px solid var(--line);
       background: color-mix(in srgb, var(--card) 92%, transparent);
     }
     .avatar{
-      width:64px; height:64px; border-radius:16px;
+      width:120px; 
+      height:120px; 
+      border-radius:20px;
       overflow:hidden;
       border:1px solid var(--line);
       background: linear-gradient(135deg, rgba(122,162,255,.25), rgba(125,255,204,.12));
       flex:0 0 auto;
     }
-    .avatar img{width:100%; height:100%; object-fit:cover; display:block}
-    .meta strong{display:block}
-    .meta span{display:block; color:var(--muted); font-size:13px}
+    .avatar img{
+      width:100%; 
+      height:100%; 
+      object-fit:cover; 
+      display:block
+    }
+
+    .meta strong{
+      display:block;
+      font-size:16px;
+    }
+
+    .meta span{
+      display:block; 
+      color:var(--muted); 
+      font-size:13px}
+
     .mini{
       display:grid;
       grid-template-columns: 1fr 1fr;
@@ -275,8 +296,8 @@
           <small>SAP Erfahrung</small>
         </div>
         <div class="stat">
-          <b>Python · ML</b>
-          <small>Analytics & SQL</small>
+          <b>Python · SQL</b>
+          <small>Analytics & ML</small>
         </div>
       </div>
 
@@ -365,7 +386,7 @@
           <span class="tag">Python</span><span class="tag">Pandas</span><span class="tag">APIs</span><span class="tag">Visualization</span>
         </div>
         <div class="links">
-          <a class="link" href="https://github.com/lyol1011/crypto-market-analysis" target="_blank" rel="noopener">sehe mehr auf GitHub</a>
+          <a class="link" href="https://github.com/lyol1011/crypto-market-analysis" target="_blank" rel="noopener">Repository</a>
         </div>
       </article>
 
@@ -376,7 +397,7 @@
           <span class="tag">scikit-learn</span><span class="tag">ML</span><span class="tag">Metrics</span>
         </div>
         <div class="links">
-          <a class="link" href="https://github.com/lyol1011/occupancy-detection-ml" target="_blank" rel="noopener">sehe mehr auf GitHub</a>
+          <a class="link" href="https://github.com/lyol1011/occupancy-detection-ml" target="_blank" rel="noopener">Repository</a>
         </div>
       </article>
 
@@ -387,7 +408,7 @@
           <span class="tag">Power BI</span><span class="tag">KPI</span><span class="tag">Dashboard</span>
         </div>
         <div class="links">
-          <a class="link" href="https://github.com/lyol1011/travel-platform-analytics-dashboard" target="_blank" rel="noopener">sehe mehr auf GitHub</a>
+          <a class="link" href="https://github.com/lyol1011/travel-platform-analytics-dashboard" target="_blank" rel="noopener">Repository</a>
         </div>
       </article>
     </div>
