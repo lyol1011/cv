@@ -248,10 +248,10 @@
     .proj .tags{margin-top:12px}
     .proj .links{display:flex; gap:10px; margin-top:14px; flex-wrap:wrap}
     .link{
-      font-size:13px; color:var(--text);
+      font-size:14px; color:var(--text);
       padding:8px 10px;
       border-radius:999px;
-      border:1px solid var(--line);
+      border:2px solid var(--line);
       background: color-mix(in srgb, var(--card) 85%, transparent);
     }
 
@@ -317,7 +317,7 @@
       <a class="chip" href="#projects">Projekte</a>
       <a class="chip" href="#skills">Skills</a>
       <a class="chip" href="#contact">Kontakt</a>
-      <button class="btn" id="themeBtn" type="button">Design</button>
+      <button class="btn" id="themeBtn" type="button">Theme</button>
     </nav>
   </div>
 </header>
@@ -329,7 +329,7 @@
       <h1>Data Analytics & ML Portfolio</h1>
       <p class="sub">
         Data-Science-Studentin (HKA) mit 3+ Jahren Praxiserfahrung bei SAP im Bereich Datenqualität und Asset Management.
-        Fokus auf Data Analytics, Machine Learning und datenbasierte Problemlösung mit Python, SQL und Power BI.
+        Fokus auf Data Analytics, Machine Learning und datenbasierte Problemlösung mit Python, SQL und PowerBI.
       </p>
 
       <div class="actions">
@@ -387,7 +387,7 @@
       <h2>Profil</h2>
     </div>
     <div class="card block">
-      <p class="note" style="font-size:14px; color:var(--text); margin:0;">
+      <p class="note" style="font-size:16px; color:var(--text); margin:0;">
         Ich verbinde praktische Erfahrung im Enterprise-Umfeld (SAP) mit universitärer Projektarbeit in Data Analytics und
         Machine Learning. Besonders interessieren mich analytische Fragestellungen mit klarem Business-Bezug – von
         Datenqualität und Explorationsanalyse bis hin zu Modellbewertung und Dashboarding.
@@ -404,7 +404,7 @@
       <div class="item">
         <div class="row">
           <div>
-            <div class="role">Werkstudentin – Hardware Asset Data Quality</div>
+            <div class="role">Werkstudentin – Hardware Asset Management</div>
             <div class="where">SAP SE, Walldorf</div>
           </div>
           <div class="when">10/2022 – 02/2026</div>
@@ -412,7 +412,7 @@
         <ul>
           <li>Strukturierte Prüfung und Validierung von Datensätzen in einer Hardware-Asset-Datenbank im SAP-Umfeld</li>
           <li>Identifikation unvollständiger oder inkonsistenter Datenfelder (z. B. Standort, Seriennummer, physische Zuordnung)</li>
-          <li>Erstellung und Nachverfolgung von ca. 200–300 Tickets zur Datenkorrektur in Abstimmung mit zuständigen Teams</li>
+          <li>Erstellung und Nachverfolgung von <b>mehr als 300 Tickets</b> zur Datenkorrektur in Abstimmung mit zuständigen Teams</li>
           <li>Bearbeitung definierter Datensätze zur Sicherstellung konsistenter Datenbasis für Asset-Management-Prozesse</li>
           <li>Kommunikation mit internationalen Teams zur Klärung und Korrektur von Dateninkonsistenzen</li>
         </ul>
@@ -445,6 +445,7 @@
             <div class="when">seit 09/2024</div>
           </div>
           <div class="note">Schwerpunkte: Data Analytics · Machine Learning · Datenbanken</div>
+          <div class="note">Aktuelles Semester: 4</div>
         </div>
       </div>
 
@@ -486,14 +487,14 @@
           <span class="tag">OpenAI API</span>
         </div>
         <div class="links">
-          <a class="link" href="https://github.com/lyol1011/crypto-market-analysis" target="_blank" rel="noopener">Repository</a>
+          <a class="link" href="https://github.com/lyol1011/crypto-market-analysis" target="_blank" rel="noopener" style="padding-top: 5px">Repository</a>
         </div>
       </article>
 
       <article class="card proj">
         <h3>Occupancy Detection (ML)</h3>
         <p>
-          Klassifikation der Raumbelegung auf Basis von Sensordaten (CO₂, Temperatur, Feuchtigkeit) mit Feature Engineering,
+          Klassifikation der Raumbelegung auf Basis von Sensordaten (CO2, Temperatur, Feuchtigkeit) mit Feature Engineering,
           TimeSeriesSplit, GridSearchCV und Business-orientierter Threshold-Optimierung.
         </p>
         <div class="tags">
@@ -511,11 +512,11 @@
       <article class="card proj">
         <h3>Travel Platform Analytics</h3>
         <p>
-          Analyse von Stakeholder-Fragen, KPI-Auswertung und Segmentanalysen (Alter, Geschlecht, Region) sowie Entwicklung
-          eines interaktiven Dashboards in Power BI.
+          Analyse von Stakeholder-Fragen, KPI-Auswertung und Segmentanalysen sowie Entwicklung
+          eines interaktiven Dashboards in PowerBI.
         </p>
         <div class="tags">
-          <span class="tag">Power BI</span>
+          <span class="tag">PowerBI</span>
           <span class="tag">KPI</span>
           <span class="tag">Dashboard</span>
           <span class="tag">Business Analytics</span>
@@ -535,36 +536,6 @@
     </div>
 
     <div class="grid3">
-      <article class="card deepCard">
-        <h3>Occupancy Detection (ML)</h3>
-
-        <div class="deepBlock">
-          <b>Problem</b>
-          <p>Vorhersage der Raumbelegung (Anwesenheit 1/0) auf Basis von Sensordaten, um HVAC-Systeme bedarfsorientiert zu steuern.</p>
-        </div>
-
-        <div class="deepBlock">
-          <b>Data</b>
-          <p>Zeitreihen-Sensordaten mit Temperatur, Luftfeuchtigkeit, CO₂ und weiteren Merkmalen.</p>
-        </div>
-
-        <div class="deepBlock">
-          <b>Approach</b>
-          <ul class="deepList">
-            <li>EDA und Datenbereinigung</li>
-            <li>Feature Engineering (Zeitmerkmale, nichtlineare Features, kurzfristige Dynamik)</li>
-            <li>Modelltraining (Logistic Regression, Decision Tree, Random Forest)</li>
-            <li>GridSearchCV + TimeSeriesSplit</li>
-            <li>Threshold-Tuning unter Kosten-/Komfortkriterien</li>
-          </ul>
-        </div>
-
-        <div class="deepBlock">
-          <b>Outcome</b>
-          <p>Random Forest zeigte im Projekt das beste Verhältnis zwischen Komfort (weniger False Negatives) und Betriebskosten.</p>
-        </div>
-      </article>
-
       <article class="card deepCard">
         <h3>Crypto Market Analysis</h3>
 
@@ -595,6 +566,37 @@
       </article>
 
       <article class="card deepCard">
+        <h3>Occupancy Detection (ML)</h3>
+
+        <div class="deepBlock">
+          <b>Problem</b>
+          <p>Vorhersage der Raumbelegung auf Basis von Sensordaten, um HVAC-Systeme bedarfsorientiert zu steuern.</p>
+        </div>
+
+        <div class="deepBlock">
+          <b>Data</b>
+          <p>Zeitreihen-Sensordaten mit Temperatur, Luftfeuchtigkeit, CO2 und weiteren Merkmalen.</p>
+
+        </div>
+
+        <div class="deepBlock">
+          <b>Approach</b>
+          <ul class="deepList">
+            <li>EDA und Datenbereinigung</li>
+            <li>Feature Engineering (Zeitmerkmale, nichtlineare Features, kurzfristige Dynamik)</li>
+            <li>Modelltraining (Logistic Regression, Decision Tree, Random Forest)</li>
+            <li>GridSearchCV + TimeSeriesSplit</li>
+            <li>Threshold-Tuning unter Kosten-/Komfortkriterien</li>
+          </ul>
+        </div>
+
+        <div class="deepBlock">
+          <b>Outcome</b>
+          <p>Random Forest zeigte im Projekt das beste Verhältnis zwischen Komfort und Betriebskosten.</p>
+        </div>
+      </article>
+
+      <article class="card deepCard">
         <h3>Travel Platform Analytics</h3>
 
         <div class="deepBlock">
@@ -604,7 +606,7 @@
 
         <div class="deepBlock">
           <b>Data</b>
-          <p>Plattformdaten mit Nutzer- und Geschäftsmetriken (u. a. Segmente nach Alter, Geschlecht und Region).</p>
+          <p>Plattformdaten mit Nutzer- und Geschäftsmetriken.</p>
         </div>
 
         <div class="deepBlock">
@@ -612,7 +614,7 @@
           <ul class="deepList">
             <li>Übersetzung von Stakeholder-Fragen in KPI-Logik</li>
             <li>Segmentanalysen und Vergleiche</li>
-            <li>Interaktives Dashboard in Power BI</li>
+            <li>Interaktives Dashboard in PowerBI</li>
             <li>Datenbasierte Handlungsempfehlungen</li>
           </ul>
         </div>
@@ -689,7 +691,7 @@
           <button class="btn" type="button" id="copyEmail">E-Mail kopieren</button>
         </div>
       </div>
-      <div class="note" style="margin-top:10px;">
+      <div class="note" style="margin-top:15px;">
         Ich freue mich über Ihre Nachricht!
       </div>
     </div>
